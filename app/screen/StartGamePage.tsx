@@ -42,7 +42,8 @@ export default function StartGamePage({
         <TextInput
           style={styles.numberInput}
           maxLength={2}
-          keyboardType="number-pad"
+          keyboardType="numeric"
+          autoFocus={true}
           autoCapitalize="none"
           autoCorrect={false}
           onChangeText={numberInputHandler}
