@@ -1,8 +1,9 @@
+import { Stack } from "@/.expo/types/router";
 import Colors from "@/constants/colors";
 import { useFonts } from "expo-font";
 import { LinearGradient } from "expo-linear-gradient";
 import { useState } from "react";
-import { ImageBackground, StatusBar, StyleSheet, View } from "react-native";
+import { ImageBackground, StatusBar, StyleSheet } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import GameOverPage from "./screen/GameOverPage";
 import GamePage from "./screen/GamePage";
@@ -19,8 +20,7 @@ export default function RootLayout() {
   });
 
   if (!fontsLoaded) {
-    // return <AppLoading />;
-    return <View></View>;
+    return <Stack />;
   }
 
   function pickedNumberHandler(pickedNumber: number) {
